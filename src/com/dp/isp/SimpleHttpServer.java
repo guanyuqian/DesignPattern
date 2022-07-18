@@ -14,22 +14,19 @@ public class SimpleHttpServer {
 
     private String host;
     private int port;
-    private Map<String, List<Viewer>> viewers = new HashMap<String, List<Viewer>>();
+    private List<Viewer> viewers = new ArrayList<Viewer>();
 
     public SimpleHttpServer(String host, int port) {
         this.host = host;
         this.port = port;
     }
 
-    public void addViewers(String urlDirectory, Viewer viewer) {
-        if (!viewers.containsKey(urlDirectory)) {
-            viewers.put(urlDirectory, new ArrayList<Viewer>());
-        }
-        this.viewers.get(urlDirectory).add(viewer);
+    public void addViewer(String urlDirectory, Viewer viewer) {
+
     }
 
 
-
-    public void run(String urlDirectory) {
+    public void run() {
+        viewers.get(0).outputInPlainText();
     }
 }

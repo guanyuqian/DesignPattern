@@ -1,9 +1,5 @@
 package com.dp.auth.api;
 
-import sun.security.provider.SHA;
-
-import java.util.Map;
-
 /**
  * @Description :   //描述
  * @Author : Liwang  //作者
@@ -62,7 +58,7 @@ public class AuthToken {
     }
 
     public boolean isExpired(){
-        return System.currentTimeMillis()>(createTime+DEFAULT_EXPIRED_TIME_INTERVAL);
+        return System.currentTimeMillis()>(createTime+this.expiredTimeInterval);
     }
 
     public boolean match(AuthToken authToken){
