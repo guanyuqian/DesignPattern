@@ -1,2 +1,4 @@
-package com.dp.metrics;public interface EmailSender {
+package com.dp.metrics;
+
+public class EmailSender {
 }
